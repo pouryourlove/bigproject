@@ -59,6 +59,7 @@ html {
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting  */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -66,6 +67,9 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+  /* Only works if there is nothing absolutely positioned in relation to body */
+  overflow-x: hidden;
 }
 
 /***************************/
@@ -105,9 +109,9 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.grid--5-cols {
+/* .grid--5-cols {
   grid-template-columns: repeat(5, 1fr);
-}
+} */
 
 .grid--center-v {
   align-items: center;
@@ -211,63 +215,6 @@ body {
   /* outline:4px dotted #e67e22;
   outline-offset: 8px; */
   box-shadow: 0 0 0 0.8rem rgb(230, 126, 34, 0.5);
-}
-
-/***************************/
-/* HEADER */
-/***************************/
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fdf2e9;
-
-  /* Because we want header to be sticky later*/
-  height: 9.6rem;
-  padding: 0 4.8rem;
-}
-
-.logo {
-  height: 2.2rem;
-}
-
-/***************************/
-/* Navigation */
-/***************************/
-.main-nav-list {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 4.8rem;
-}
-
-.main-nav-link:link,
-.main-nav-link:visited {
-  display: inline-block;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 1.8rem;
-  transition: all 0.3s;
-}
-
-.main-nav-link:hover,
-.main-nav-link:active {
-  color: #cf711f;
-}
-
-.main-nav-link.nav-cta:link,
-.main-nav-link.nav-cta:visited {
-  padding: 1.2rem 2.4rem;
-  border-radius: 9px;
-  color: #fff;
-  background-color: #e67e22;
-}
-
-.main-nav-link.nav-cta:hover,
-.main-nav-link.nav-cta:active {
-  background-color: #cf711f;
 }
 
 /* HELPER/SETTINGS CLASSES */
